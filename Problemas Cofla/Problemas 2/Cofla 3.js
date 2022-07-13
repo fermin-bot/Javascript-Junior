@@ -32,20 +32,19 @@ console.log(accion)
 
 switch (accion){
 
-    case 'suma' || 'sumar':
+    case 'suma':
         sumar()
-        document.write("<h1>Sumar</h1>")
         break;
 
-    case 'resta' || 'restar':
+    case 'resta':
         restar()
         break;
 
-    case 'multiplica' || 'multiplica':
+    case 'multiplica':
         Multiplicar()
         break;
 
-    case 'divide' || 'divide':
+    case 'divide':
         Dividir()
         break;
     }

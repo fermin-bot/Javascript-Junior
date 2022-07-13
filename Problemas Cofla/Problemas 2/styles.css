@@ -1,0 +1,9 @@
+button{
+    height: 20px;
+    width: 30px;
+    margin: 1px;
+}
+#clear{
+    column-span: 3;
+    width: 138px;
+}
