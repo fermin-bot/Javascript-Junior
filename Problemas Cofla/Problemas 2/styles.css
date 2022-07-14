@@ -3,7 +3,14 @@ button{
     width: 30px;
     margin: 1px;
 }
-#clear{
+#btnclear{
     column-span: 3;
+    width: 138px;
+}
+
+#result{
+    border: gray outset 5px;
+    background-color: cadetblue;
+    overflow: hidden;
     width: 138px;
 }
