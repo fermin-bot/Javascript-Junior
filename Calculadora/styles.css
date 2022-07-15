@@ -9,11 +9,12 @@ button{
     width: 138px;
 }
 
-#result{
+#screen{
     border: gray outset 2px;
     background-color: gray;
     overflow: hidden;
     width: 134px;
+    height: 37px;
 }
 
 .calculator{
@@ -26,24 +27,14 @@ button{
     width: 150px;
 }
 
-.led1{
+#led{
     border: black solid 1px;
     border-radius: 10px;
     width: 10px;
     height: 10px;
     margin: 2px;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     background-color: red;
-}
-
-.led2{
-    border: black solid 1px;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    margin: 2px;
-    margin-bottom: -10px;
-    background-color: green;
 }
 
 .leds{
@@ -56,4 +47,8 @@ button{
     width: 40px;
     height: 20px;
     margin-left: auto; 
+}
+
+#result{
+    visibility: hidden;
 }

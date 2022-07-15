@@ -104,7 +104,7 @@ document.getElementById("btnmultiply").onclick = function() {
     result = temp1;
     temp1 = "";
     oper = "*";
-    
+
 }
 
 document.getElementById("btnminus").onclick = function() {
@@ -148,4 +148,17 @@ document.getElementById("btnclear").onclick = function() {
     oper = "";
     recuerdo = 0;
     result = 0;
+}
+
+interruptor = false
+
+document.getElementById("interruptor").onclick = function() {
+    if (interruptor == false) {
+        interruptor = true;
+        document.getElementById("interruptor").src = "calculadora\on.png";
+    }
+        else{
+            interruptor = false;
+            document.getElementById("interruptor").src = "calculadora\off.png";
+        }
 }

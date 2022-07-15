@@ -9,10 +9,6 @@ recuerdo = 0;
 
 result = 0;
 
-result = 
-
-recuerdo = parseFloat(recuerdo);
-
 document.getElementById("btn1").onclick = function() {
     temp1 = temp1 + "1"
     document.getElementById("result").innerText = temp1;
@@ -74,14 +70,9 @@ document.getElementById("btndivide").onclick = function() {
     document.getElementById("result").innerText = temp1;
     if (recuerdo != 0) {
         temp1 = recuerdo;
-    }
+     }
     temp1 = parseInt(temp1);
-    if (result == 0) {
-        result = temp1;
-    }
-        else {
-            result = result / temp1;
-        }
+    result = temp1;
     temp1 = "";
     oper = "/";
 }
@@ -93,14 +84,9 @@ document.getElementById("btnplus").onclick = function() {
     document.getElementById("result").innerText = temp1;
     if (recuerdo != 0) {
         temp1 = recuerdo;
-    }
+     }
     temp1 = parseInt(temp1);
-    if (result == 0) {
-        result = temp1;
-    }
-        else {
-            result = result + temp1;;
-        }
+    result = temp1;
     temp1 = "";
     oper = "+";
 }
@@ -110,35 +96,27 @@ document.getElementById("btnmultiply").onclick = function() {
         temp1 = 0;
     }
     document.getElementById("result").innerText = temp1;
-    if (recuerdo != 0) {
+    if(recuerdo != 0){
         temp1 = recuerdo;
+        recuerdo = 0
     }
     temp1 = parseInt(temp1);
-    if (result == 0) {
-        result = temp1;
-    }
-        else {
-            result = result * temp1;
-        }
+    result = temp1;
     temp1 = "";
     oper = "*";
+
 }
 
 document.getElementById("btnminus").onclick = function() {
-    if(temp1===""){
+    if(temp1==""){
         temp1 = 0;
     }
     document.getElementById("result").innerText = temp1;
     if (recuerdo != 0) {
         temp1 = recuerdo;
-    }
+     }
     temp1 = parseInt(temp1);
-    if (result == 0) {
-        result = temp1;
-    }
-        else {
-            result = result -temp1;;
-        }
+    result = temp1;
     temp1 = "";
     oper = "-";
 }
@@ -163,4 +141,36 @@ document.getElementById("btnequal").onclick = function() {
     temp1 = "";
     document.getElementById("result").innerText = result;
     result = 0;
+}
+
+document.getElementById("btnclear").onclick = function() {
+    temp1 = "";
+    oper = "";
+    recuerdo = 0;
+    result = 0;
+    document.getElementById("result").innerText = '0';
+}
+
+interruptor = false
+
+document.getElementById("interruptor").onclick = function() {
+    
+    temp1 = "";
+    oper = "";
+    recuerdo = 0;
+    result = 0;
+
+    if (interruptor == false) {
+        interruptor = true;
+        document.getElementById("result").innerText = '0';
+        document.getElementById("interruptor").src = "on.png";
+        document.getElementById("led").style.backgroundColor = "green";
+        document.getElementById("result").style.visibility = "visible";
+    }
+        else{
+            interruptor = false;
+            document.getElementById("interruptor").src = "off.png";
+            document.getElementById("led").style.backgroundColor = "red";
+            document.getElementById("result").style.visibility = "hidden";
+        }
 }
